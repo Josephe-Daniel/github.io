@@ -1,0 +1,28 @@
+// Base font size
+$base-font-size: 16!default;
+
+// Responsive
+$small: 576px!default;
+$medium: 768px!default;
+$large: 992px!default;
+$xlarge: 1200px!default;
+
+// Colors
+$color-primary: #9356DC;
+$color-primary-light: #F5EDFF;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-tertiary-strong: #008766;
+
+// Background colors
+$gray: #7E7E7E;
+$gray-medium: #EAEAEA;
+$gray-light: #F6F6F6;
+$white: #FFF;
+$black: #353535;
+$linear-gradient: linear-gradient(180deg, $color-secondary, $color-primary);
+
+// Plates
+$num-plates: 10;
+$anim-dur: 750ms;
+$anim-delay: 75ms;

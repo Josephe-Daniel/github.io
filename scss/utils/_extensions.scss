@@ -1,0 +1,35 @@
+%container-sm {
+    padding: 1rem;
+
+    @media #{$large-up} {
+        padding: 1rem 4rem;
+    }
+
+    @media #{$xlarge-up} {
+        padding: 1rem 8rem;
+    }
+}
+
+%container-md {
+    padding: rem(20);
+
+    @media #{$large-up} {
+        padding: rem(25) 4rem;
+    }
+
+    @media #{$xlarge-up} {
+        padding: rem(30) 8rem;
+    }
+}
+
+%container {
+    padding: rem(50) rem(20);
+
+    @media #{$large-up} {
+        padding: 4rem;
+    }
+
+    @media #{$xlarge-up} {
+        padding: 4rem 8rem;
+    }
+}

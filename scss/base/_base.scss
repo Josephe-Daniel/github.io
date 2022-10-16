@@ -1,0 +1,39 @@
+html {
+    font-size: unquote($base-font-size + 'px');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    color: #000;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section {
+    @extend %container;
+}
+
+h2 {
+    font-size: rem(25);
+    font-weight: 900;
+    margin-bottom: rem(20);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    @include transition-ease;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+:focus {
+    outline: none;
+}

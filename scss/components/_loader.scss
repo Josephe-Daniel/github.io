@@ -1,0 +1,52 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($white, .95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__circles {
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        border-radius: 80px;
+        border: 4px solid transparent;
+        border-top-color: $color-primary;
+        animation: spin 2s linear 1.1s both;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            bottom: 8px;
+            right: 8px;
+            border-radius: 50px;
+            border: 4px solid transparent;
+            border-top-color: $color-secondary;
+            opacity: 0.8;
+            animation: spin 2.5s linear 600ms;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50px;
+            border: 4px solid transparent;
+            border-top-color: $color-tertiary;
+            opacity: 0.5;
+            animation: spin 3s linear 100ms;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.card {
+    position: relative;
+    border-radius: 1rem;
+    margin-bottom: rem(20);
+    @include flex(column, normal, normal, nowrap);
+    @include general-shadow;
+
+    &__img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    &__body {
+        padding: 1rem;
+        @include flex(row, center, space-between, nowrap);
+    }
+
+    &__title {
+        font-size: rem(18);
+        font-weight: 900;
+        margin-bottom: rem(5);
+    }
+
+    &__city {
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    &__status {
+        padding: rem(8) rem(12);
+        background-color: $color-tertiary;
+        color: $color-tertiary-strong;
+        font-size: rem(14);
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        @include general-shadow;
+    }
+
+    &:hover {
+        @include hover-shadow;
+    }
+
+    @media #{$medium-up} {
+        flex-basis: 48%;
+    }
+
+    @media #{$xlarge-up} {
+        flex-basis: 31%;
+    }
+}

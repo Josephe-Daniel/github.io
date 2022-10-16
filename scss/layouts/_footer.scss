@@ -1,0 +1,32 @@
+.footer {
+    background: $black;
+    color: $white;
+    @extend %container-md;
+
+    &__title {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        font-size: rem(18);
+        text-transform: lowercase;
+        margin-bottom: rem(20);
+    }
+
+    li {
+        margin-bottom: rem(10);
+
+        a {
+            &:hover {
+                color: darken($white, 20%);
+            }
+        }
+
+        i {
+            margin-right: rem(5);
+            font-size: rem(14);
+        }
+
+        address {
+            font-style: normal;
+        }
+    }
+}

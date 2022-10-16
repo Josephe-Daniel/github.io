@@ -1,2 +1,3 @@
-# github.io
-cd username.github.io  echo "Hello World"
+cd username.github.io
+
+echo "Hello World" >

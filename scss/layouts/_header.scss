@@ -1,0 +1,25 @@
+.header {
+    position: relative;
+    z-index: 1;
+    @extend %container-sm;
+    @include header-shadow;
+    @include flex(row, center, center, nowrap);
+
+    .navbar {
+        margin-right: auto;
+
+        a {
+            display: inline-block;
+            font-size: rem(18);
+            transform: scale(1);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        & ~ img {
+            margin-right: auto;
+        }
+    }
+}

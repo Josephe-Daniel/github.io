@@ -1,0 +1,59 @@
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    color: $white;
+    position: relative;
+    z-index: 1;
+    @include linear-gradient(180deg, $color-secondary, $color-primary);
+    @include button-shadow;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 2rem;
+        @include linear-gradient(180deg, lighten($color-secondary, 3), lighten($color-primary, 5));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity .3s ease;
+    }
+
+    &:hover {
+        @include hover-shadow;
+
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    &--py {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    &--mr {
+        margin-right: rem(20);
+    }
+}
+
+.btn-like {
+    margin-left: rem(10);
+    
+    i {
+        font-size: rem(25);
+
+        &:hover {
+            font-weight: 700;
+            background-image: $linear-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            -moz-background-clip: text;
+            animation: full-heart 300ms ease-in-out both;
+        }
+    }
+}

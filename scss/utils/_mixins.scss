@@ -1,0 +1,31 @@
+@mixin header-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+@mixin button-shadow {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .2);
+}
+
+@mixin general-shadow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+@mixin hover-shadow {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+}
+
+@mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin linear-gradient($degree, $color1, $color2) {
+    background: linear-gradient($degree, $color1 0%, $color2 100%);
+}
+
+@mixin transition-ease {
+    transition: all .3s ease;
+}

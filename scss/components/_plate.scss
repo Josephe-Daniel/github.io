@@ -1,0 +1,83 @@
+.plate {
+    padding: rem(12);
+    background: $white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    animation: plate-appear $anim-dur cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    transform: scale(0);
+    overflow: hidden;
+    @include general-shadow;
+    @include flex(row, inherit, space-between, nowrap);
+    
+    &__info {
+        white-space: nowrap;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    &__title, &__composition {
+        text-overflow: ellipsis;
+        overflow: hidden; 
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: rem(18);
+        margin-bottom: rem(5);
+    }
+
+    &__composition {
+        font-weight: 300;
+        font-size: rem(15);
+    }
+
+    &__price {
+        align-self: flex-end;
+        margin-left: rem(10);
+    }
+
+    &__confirmation {
+        background-color: #99E2D0;
+        color: $white;
+        font-size: rem(20);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        width: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -0.75rem -4.5rem -0.75rem 1rem;
+        transition: margin-right $anim-dur ease;
+
+        i {
+            transform: rotate(0);
+            transition: transform $anim-dur ease;
+        }   
+    }
+
+    &:hover {
+        @include hover-shadow;
+
+        .plate__confirmation {
+            margin-right: -0.75rem;
+
+            i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    @for $i from 1 through $num-plates {
+        &--#{$i} {
+          animation-delay: $anim-delay * $i;
+        }
+    }
+
+    @media #{$medium-up} {
+        flex-basis: 49%;
+    }
+
+    @media #{$large-up} {
+        flex-basis: 32%;
+    }
+}

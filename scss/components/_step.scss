@@ -1,0 +1,51 @@
+.step {
+    background: $gray-light;
+    padding: rem(25) rem(10);
+    margin-bottom: rem(20);
+    margin-left: rem(13);
+    border-radius: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    @include flex(row, center, flex-start, nowrap);
+    @include general-shadow;
+    @include transition-ease;
+
+    &__icon {
+        margin: 0 rem(20) 0 rem(26);
+        font-size: rem(20);
+        color: $gray;
+    }
+
+    &__title {
+        font-weight: 900;
+    }
+
+    &__number {
+        background: $color-primary;
+        color: $white;
+        width: rem(26);
+        height: rem(26);
+        line-height: rem(26);
+        border-radius: 50%;
+        font-size: rem(13);
+        text-align: center;
+        position: absolute;
+        left: - rem(13);
+    }
+
+    &:hover {
+        background-color: $color-primary-light;
+
+        i {
+            color: $color-primary;
+        }
+    }
+
+    @media #{$medium-up} {
+        flex-basis: 47%;
+    }
+
+    @media #{$large-up} {
+        flex-basis: 30%;
+    }
+}
